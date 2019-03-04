@@ -14,7 +14,7 @@ services:
       - MYSQL_DB=bugs
       - MYSQL_USER=root
       - MYSQL_PWD=somepassword
-      - URLBASE=http://some.site.com/
+      - URLBASE=https://$SQUASH_DOMAIN
       - MAINTAINER=user@example.com
       - MAILFROM=someuser@another.com
       - SMTP_PASSWORD=anotherpassword
