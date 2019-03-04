@@ -7,14 +7,13 @@ services:
     links:
       - database:mysql-host
     ports:
-      - "80:80"
+      - "8000:80"
     depends_on:
       - "database"
     environment:
       - MYSQL_DB=bugs
       - MYSQL_USER=root
       - MYSQL_PWD=somepassword
-      - URLBASE=https://$SQUASH_DOMAIN
       - MAINTAINER=user@example.com
       - MAILFROM=someuser@another.com
       - SMTP_PASSWORD=anotherpassword
@@ -25,4 +24,3 @@ services:
     image: mysql:5.5
     environment:
       - MYSQL_ROOT_PASSWORD=somepassword
-      - MYSQL_DATABASE=bugs
